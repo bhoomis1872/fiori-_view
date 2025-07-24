@@ -1,0 +1,100 @@
+<mvc:View controllerName="bhoomi.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+
+    <Page id="page" title="Weapon Dispatch Form">
+        <content>
+
+            <!-- Section 1: Invoice Details -->
+            <f:SimpleForm
+                id="invoiceForm"
+                layout="ResponsiveGridLayout"
+                editable="true"
+                labelSpanXL="3" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+                columnsXL="2" columnsL="2" columnsM="1"
+                class="sapUiSmallMargin">
+
+                <Title id="_IDGenTitle" text="1. Invoice Details (Essential)" />
+
+                <Label id="_IDGenLabel1" text="Invoice Number" />
+                <Input id="invoiceNumber" placeholder="Enter invoice number" />
+
+                <Label id="_IDGenLabel2" text="Invoice Date" />
+                <DatePicker id="invoiceDate" placeholder="Select date" />
+
+                <Label id="_IDGenLabel3" text="Issuing Unit" />
+                <Input id="issuingUnit" placeholder="Enter issuing unit" />
+                <Label id="_IDGenLabel4" text="Receiving Unit" />
+                <Input id="receivingUnit" placeholder="Enter receiving unit" />
+
+                <Label id="_IDGenLabel5" text="Officer In Charge" />
+                <Input id="officerInCharge" placeholder="Enter officer name" />
+
+                <Label id="_IDGenLabel6" text="Rank" />
+                <Input id="rank" placeholder="Enter rank" />
+            </f:SimpleForm>
+
+            <!-- Section 2: Weapon Details -->
+            <f:SimpleForm
+                id="weaponForm"
+                layout="ResponsiveGridLayout"
+                editable="true"
+                labelSpanXL="3" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+                columnsXL="2" columnsL="2" columnsM="1"
+                class="sapUiSmallMargin">
+
+                <Title id="_IDGenTitle1" text="2. Weapon Details (Essential per item)" />
+
+                <Label id="_IDGenLabel7" text="Weapon Type" />
+                <Input id="weaponType" placeholder="e.g. Rifle, Pistol" />
+
+                <Label id="_IDGenLabel8" text="Model" />
+                <Input id="model" placeholder="Enter model" />
+
+                <Label id="_IDGenLabel9" text="Serial Number" />
+                <Input id="serialNumber" placeholder="Enter serial number" />
+
+                <Label id="_IDGenLabel10" text="Quantity" />
+                <Input id="quantity" type="Number" placeholder="Enter quantity" />
+
+                <Label id="_IDGenLabel11" text="Unit Price" />
+                <Input id="unitPrice" type="Number" placeholder="Enter unit price" />
+
+                <Label id="_IDGenLabel12" text="Total Amount" />
+                <Input id="totalAmount" value="0.00" editable="false" />
+            </f:SimpleForm>
+
+            <!-- Section 3: Logistics Info -->
+            <f:SimpleForm
+                id="logisticsForm"
+                layout="ResponsiveGridLayout"
+                editable="true"
+                labelSpanXL="3" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+                columnsXL="2" columnsL="2" columnsM="1"
+                class="sapUiSmallMargin">
+
+                <Title id="_IDGenTitle2" text="3. Logistics Info (Essential)" />
+
+                <Label id="_IDGenLabel13" text="Dispatch Date" />
+                <DatePicker id="dispatchDate" placeholder="Select dispatch date" />
+
+                <Label id="_IDGenLabel14" text="Mode of Transport" />
+                <Input id="modeTransport" placeholder="e.g. Truck, Air" />
+
+                <Label id="_IDGenLabel15" text="Vehicle Number" />
+                <Input id="vehicleNumber" placeholder="Enter vehicle number" />
+
+                <Label id="_IDGenLabel16" text="Delivery Location" />
+                <Input id="deliveryLocation" placeholder="Enter delivery location" />
+            </f:SimpleForm>
+
+            <!-- Submit Button -->
+            <VBox id="_IDGenVBox" class="sapUiSmallMarginTop sapUiSmallMarginBottom">
+                <Button id="_IDGenButton" text="Submit" type="Emphasized" press="onSubmit" />
+            </VBox>
+
+        </content>
+    </Page>
+</mvc:View>
